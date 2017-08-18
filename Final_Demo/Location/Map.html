@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Searchable Inventory</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    
+</head>
+<body>
+<H1 class="Big_Head"> SEARCHABLE INVENTORY</H1>
+<div align="right">
+<h3 class="btn-toolbar" align="center" >SEARCH YOUR PRODUCT HERE</h2>
+<input style="text-align: center" align="center" type="text" class="center-block" id="inp">
+<div style="text-align: center">
+    <br>
+<button onclick="myMap()" style=" height:50px; width:200px; " type="button" class="btn btn-success" >SEARCH</button>
+</div>
+
+</div>
+<div id="map" align="left">
+
+</div>
+
+<script>
+    var map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 24.8615, lng: 67.0099},
+            zoom: 12
+        });
+		var marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+          title: 'Uluru (Ayers Rock)'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+    }
+	
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX35FUpehnjXVjSVufX7FBYUAFeWhZnWY&callback=initMap"
+        async defer></script>
+</body>
+</html>

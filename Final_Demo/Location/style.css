@@ -1,0 +1,22 @@
+#map {
+    height: 70%;
+	width:auto;
+	
+
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.Big_Head
+{
+
+    font-family: "Arial Black";
+    font-weight: bold;
+    text-align: center;
+	width:30;
+	
+}
